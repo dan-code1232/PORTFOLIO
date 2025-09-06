@@ -3,9 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio</title>
+  <title>Daniel H. - Creative Developer Portfolio | Web Developer & Game Creator</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Creative developer portfolio showcasing web projects, games, and interactive experiences. Specializing in HTML5, CSS3, JavaScript, Python, and UI/UX design." />
+  <meta name="keywords" content="web developer, game developer, portfolio, HTML5, CSS3, JavaScript, Python, UI/UX, creative coding, responsive design" />
+  <meta name="author" content="Daniel H." />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="7 days" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dan-code1232.github.io/Portfolio./" />
+  <meta property="og:title" content="Daniel H. - Creative Developer Portfolio" />
+  <meta property="og:description" content="Creative developer portfolio showcasing web projects, games, and interactive experiences. Specializing in HTML5, CSS3, JavaScript, Python, and UI/UX design." />
+  <meta property="og:image" content="https://yourportfolio.com/og-image.jpg" />
+  <meta property="og:site_name" content="Daniel H. Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://yourportfolio.com/" />
+  <meta property="twitter:title" content="Daniel H. - Creative Developer Portfolio" />
+  <meta property="twitter:description" content="Creative developer portfolio showcasing web projects, games, and interactive experiences." />
+  <meta property="twitter:image" content="https://yourportfolio.com/og-image.jpg" />
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#4f46e5" />
+  <meta name="msapplication-TileColor" content="#4f46e5" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Daniel H. Portfolio" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yourportfolio.com/" />
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://code.jquery.com" />
+  <link rel="preconnect" href="https://unpkg.com" />
+  
+  <!-- DNS Prefetch -->
+  <link rel="dns-prefetch" href="//api.sololearn.com" />
+  <link rel="dns-prefetch" href="//formspree.io" />
+  
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+  
+  <!-- External Libraries -->
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>��</text></svg>">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Daniel H.",
+    "jobTitle": "Creative Developer",
+    "description": "Self-taught coder with a passion for building interactive websites and games. Always exploring new technologies and creative solutions.",
+    "url": "https://yourportfolio.com",
+    "sameAs": [
+      "https://github.com/yourusername",
+      "https://linkedin.com/in/yourusername",
+      "https://twitter.com/yourusername"
+    ],
+    "knowsAbout": [
+      "HTML5",
+      "CSS3", 
+      "JavaScript",
+      "Python",
+      "Game Development",
+      "Web Design",
+      "UI/UX",
+      "Git & GitHub",
+      "APIs",
+      "Figma"
+    ],
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Web Developer",
+      "description": "Building interactive websites and web applications"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "SoloLearn"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Daniel H. Portfolio",
+    "url": "https://yourportfolio.com",
+    "description": "Creative developer portfolio showcasing web projects, games, and interactive experiences",
+    "author": {
+      "@type": "Person",
+      "name": "Daniel H."
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://yourportfolio.com/?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <style>
     :root {
       --bgDark: #181a23;
@@ -114,7 +223,7 @@
       background: var(--primary);
       transform: rotate(90deg);
     }
-    .section h2 {
+    .section h1, .section h2 {
       color: var(--primaryLight);
       font-size: 2.8rem;
       margin-bottom: 2rem;
@@ -468,6 +577,22 @@
       background: rgba(255, 255, 255, 0.3);
       cursor: not-allowed;
     }
+    
+    /* Skip to content for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: var(--primary);
+      color: var(--white);
+      padding: 8px;
+      text-decoration: none;
+      z-index: 10002;
+    }
+    .skip-link:focus {
+      top: 6px;
+    }
+    
     @media (max-width: 900px) {
       .card, .cert-cell { width: 95vw; }
       .carousel-cell { width: 95vw; }
@@ -488,178 +613,193 @@
   </style>
 </head>
 <body>
+  <!-- Skip to content for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
   <!-- Sidebar + Menu -->
-  <div id="sidebar">
+  <nav id="sidebar" role="navigation" aria-label="Main navigation">
     <div class="sidebar-title">Portfolio</div>
-    <a class="active" href="#Home">Home</a>
-    <a href="#About">About</a>
-    <a href="#Projects">Projects</a>
-    <a href="#Skills">Skills</a>
-    <a href="#Certificates">Certificates</a>
-    <a href="#Contact">Contact</a>
-  </div>
-  <div id="hamburger" onclick="hamburger()">☰</div>
-  <!-- Hero Section -->
-  <section id="hero-1785" class="section">
-    <div class="canvas-wrapper">
-      <canvas id="c"></canvas>
-    </div>
-    <div class="section" id="Home">
-      <div class="cs-container">
-        <svg id="dh-logo" class="logo" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" style="width:120px;height:60px;display:block;margin:0 auto 1.5rem;">
-          <defs>
-            <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#4f46e5" />
-              <stop offset="100%" stop-color="#fbbf24" />
-            </linearGradient>
-            <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-              <feDropShadow dx="4" dy="4" stdDeviation="3" flood-color="black"/>
-            </filter>
-          </defs>
-          <text id="dh-text" x="50%" y="50%" font-size="60" font-family="Arial" fill="none" stroke="url(#grad)" stroke-width="4" text-anchor="middle" alignment-baseline="middle" filter="url(#shadow)" stroke-dasharray="0, 200" stroke-dashoffset="0">
-            DH
-            <animate id="dh-anim" attributeName="stroke-dasharray" from="0, 200" to="200, 0" dur="2s" repeatCount="indefinite" begin="indefinite"/>
-          </text>
-        </svg>
-        <div class="hero-title">Creative Developer Portfolio</div>
-        <span class="auto-typed"></span>
-        <p class="hero-desc">Welcome! Explore a showcase of web projects, games, and creative coding. Passionate about building interactive, beautiful, and functional digital experiences.</p>
+    <a class="active" href="#Home" aria-label="Go to Home section">Home</a>
+    <a href="#About" aria-label="Go to About section">About</a>
+    <a href="#Projects" aria-label="Go to Projects section">Projects</a>
+    <a href="#Skills" aria-label="Go to Skills section">Skills</a>
+    <a href="#Certificates" aria-label="Go to Certificates section">Certificates</a>
+    <a href="#Contact" aria-label="Go to Contact section">Contact</a>
+  </nav>
+  
+  <button id="hamburger" onclick="hamburger()" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="hero-1785" class="section" role="banner">
+      <div class="canvas-wrapper">
+        <canvas id="c" aria-hidden="true"></canvas>
       </div>
-    </div>
-  </section>
-  <!-- About Section -->
-  <section id="About" class="section">
-    <div class="about-bg">
-      <svg viewBox="0 0 900 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="0" width="900" height="600" fill="#23243a"/>
-        <g fill="#fbbf24">
-          <circle r="147" cx="361" cy="278"/>
-          <circle r="65" cx="688" cy="201"/>
-          <circle r="103" cx="8" cy="576"/>
-        </g>
-      </svg>
-    </div>
-    <div class="card-container">
-      <div class="card">
-        <div class="card-front">
-          <div class="img-area"><div class="inner-area"></div></div>
-          <div class="name">Web Creator</div>
-          <div class="about"><h3>Design & Code</h3></div>
+      <div class="section" id="Home">
+        <div class="cs-container">
+          <svg id="dh-logo" class="logo" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" style="width:120px;height:60px;display:block;margin:0 auto 1.5rem;" aria-label="Daniel H. Logo">
+            <defs>
+              <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#4f46e5" />
+                <stop offset="100%" stop-color="#fbbf24" />
+              </linearGradient>
+              <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                <feDropShadow dx="4" dy="4" stdDeviation="3" flood-color="black"/>
+              </filter>
+            </defs>
+            <text id="dh-text" x="50%" y="50%" font-size="60" font-family="Arial" fill="none" stroke="url(#grad)" stroke-width="4" text-anchor="middle" alignment-baseline="middle" filter="url(#shadow)" stroke-dasharray="0, 200" stroke-dashoffset="0">
+              DH
+              <animate id="dh-anim" attributeName="stroke-dasharray" from="0, 200" to="200, 0" dur="2s" repeatCount="indefinite" begin="indefinite"/>
+            </text>
+          </svg>
+          <h1 class="hero-title">Creative Developer Portfolio</h1>
+          <span class="auto-typed" aria-live="polite"></span>
+          <p class="hero-desc">Welcome! Explore a showcase of web projects, games, and creative coding. Passionate about building interactive, beautiful, and functional digital experiences.</p>
         </div>
-        <div class="card-back">
-          <div class="back-content">
-            <p>Self-taught coder with a passion for building interactive websites and games. Always exploring new technologies and creative solutions.</p>
+      </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="About" class="section" role="region" aria-labelledby="about-heading">
+      <div class="about-bg" aria-hidden="true">
+        <svg viewBox="0 0 900 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="900" height="600" fill="#23243a"/>
+          <g fill="#fbbf24">
+            <circle r="147" cx="361" cy="278"/>
+            <circle r="65" cx="688" cy="201"/>
+            <circle r="103" cx="8" cy="576"/>
+          </g>
+        </svg>
+      </div>
+      <h2 id="about-heading">About</h2>
+      <div class="card-container">
+        <div class="card" role="button" tabindex="0" aria-label="Flip card to learn more about web creation">
+          <div class="card-front">
+            <div class="img-area"><div class="inner-area"></div></div>
+            <div class="name">Web Creator</div>
+            <div class="about"><h3>Design & Code</h3></div>
+          </div>
+          <div class="card-back">
+            <div class="back-content">
+              <p>Self-taught coder with a passion for building interactive websites and games. Always exploring new technologies and creative solutions.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div style="max-width:400px;">
-        <h3 style="color:var(--primaryLight);margin-bottom:0.5rem;font-weight:800;">About</h3>
-        <p style="color:var(--white);font-size:1.15rem;font-weight:600;">
-          Driven by curiosity and creativity, I enjoy turning ideas into digital reality. My journey is all about learning, experimenting, and sharing projects with the world.
-        </p>
-      </div>
-    </div>
-  </section>
-  <!-- Projects Section -->
-  <section id="Projects" class="section">
-    <h2>Projects</h2>
-    <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 3000 }'>
-      <div class="carousel-cell">
-        <b>Personal Portfolio</b><br>
-        <span style="font-size:1.1rem;color:var(--white);font-weight:600;">A modern, responsive portfolio website built with HTML, CSS, and JavaScript.</span>
-      </div>
-      <div class="carousel-cell">
-        <b>Pocket Money Tracker (App)</b><br>
-        <span style="font-size:1.1rem;color:var(--white);font-weight:600;">A mobile app to help kids manage their pocket money and savings.</span>
-      </div>
-      <div class="carousel-cell">
-        <b>Face Tracker for Tello Drone</b><br>
-        <span style="font-size:1.1rem;color:var(--white);font-weight:600;">A Python project that uses computer vision to track faces and control a Tello drone in real time.</span>
-      </div>
-    </div>
-  </section>
-  <!-- Skills Section -->
-  <section id="Skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <div class="skill-item">HTML5</div>
-      <div class="skill-item">CSS3</div>
-      <div class="skill-item">JavaScript</div>
-      <div class="skill-item">Python</div>
-      <div class="skill-item">Game Development</div>
-      <div class="skill-item">Web Design</div>
-      <div class="skill-item">UI/UX</div>
-      <div class="skill-item">Git & GitHub</div>
-      <div class="skill-item">APIs</div>
-      <div class="skill-item">Figma</div>
-    </div>
-  </section>
-  <!-- Certificates Section -->
-  <section id="Certificates" class="section">
-    <h2>Certificates</h2>
-    <div class="cert-carousel" data-flickity='{ "wrapAround": true, "autoPlay": 3500, "pageDots": true, "cellAlign": "center" }'>
-      <div class="cert-cell">
-        <div class="cert-logo">
-          <img src="https://api.sololearn.com/Uploads/Avatars/sololearn.png" alt="SoloLearn Logo">
+        <div style="max-width:400px;">
+          <h3 style="color:var(--primaryLight);margin-bottom:0.5rem;font-weight:800;">About</h3>
+          <p style="color:var(--white);font-size:1.15rem;font-weight:600;">
+            Driven by curiosity and creativity, I enjoy turning ideas into digital reality. My journey is all about learning, experimenting, and sharing projects with the world.
+          </p>
         </div>
-        <div class="cert-title">Python for Beginners</div>
-        <div class="cert-date">SoloLearn · Jan 2024</div>
-        <div class="cert-desc">Completed the SoloLearn Python for Beginners course, covering variables, loops, functions, and more.</div>
       </div>
-      <div class="cert-cell">
-        <div class="cert-logo">
-          <img src="https://api.sololearn.com/Uploads/Avatars/sololearn.png" alt="SoloLearn Logo">
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="Projects" class="section" role="region" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 3000 }' role="region" aria-label="Projects carousel">
+        <div class="carousel-cell">
+          <b>Personal Portfolio</b><br>
+          <span style="font-size:1.1rem;color:var(--white);font-weight:600;">A modern, responsive portfolio website built with HTML, CSS, and JavaScript.</span>
         </div>
-        <div class="cert-title">Responsive Web Design</div>
-        <div class="cert-date">SoloLearn · Feb 2024</div>
-        <div class="cert-desc">Learned to build responsive websites using HTML5, CSS3, and modern design principles on SoloLearn.</div>
-      </div>
-      <div class="cert-cell">
-        <div class="cert-logo">
-          <img src="https://api.sololearn.com/Uploads/Avatars/sololearn.png" alt="SoloLearn Logo">
+        <div class="carousel-cell">
+          <b>Pocket Money Tracker (App)</b><br>
+          <span style="font-size:1.1rem;color:var(--white);font-weight:600;">A mobile app to help kids manage their pocket money and savings.</span>
         </div>
-        <div class="cert-title">JavaScript Essentials</div>
-        <div class="cert-date">SoloLearn · Mar 2024</div>
-        <div class="cert-desc">Mastered the fundamentals of JavaScript, DOM manipulation, and interactive web apps on SoloLearn.</div>
-      </div>
-      <div class="cert-cell">
-        <div class="cert-logo">
-          <img src="https://api.sololearn.com/Uploads/Avatars/sololearn.png" alt="SoloLearn Logo">
+        <div class="carousel-cell">
+          <b>Face Tracker for Tello Drone</b><br>
+          <span style="font-size:1.1rem;color:var(--white);font-weight:600;">A Python project that uses computer vision to track faces and control a Tello drone in real time.</span>
         </div>
-        <div class="cert-title">Game Development with Python</div>
-        <div class="cert-date">SoloLearn · Apr 2024</div>
-        <div class="cert-desc">Built several games using Python, learning about game loops, sprites, and logic on SoloLearn.</div>
       </div>
-    </div>
-  </section>
-  <!-- Contact Section -->
-  <section id="Contact" class="section">
-    <h2>Contact</h2>
-    <p>Have a question or want to connect? Drop a message below!</p>
-    <form action="https://formspree.io/f/xovezdzq" method="POST">
-      <div class="form-group">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="Skills" class="section" role="region" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="skills-list" role="list" aria-label="Technical skills">
+        <div class="skill-item" role="listitem">HTML5</div>
+        <div class="skill-item" role="listitem">CSS3</div>
+        <div class="skill-item" role="listitem">JavaScript</div>
+        <div class="skill-item" role="listitem">Python</div>
+        <div class="skill-item" role="listitem">Game Development</div>
+        <div class="skill-item" role="listitem">Web Design</div>
+        <div class="skill-item" role="listitem">UI/UX</div>
+        <div class="skill-item" role="listitem">Git & GitHub</div>
+        <div class="skill-item" role="listitem">APIs</div>
+        <div class="skill-item" role="listitem">Figma</div>
       </div>
-      <div class="form-group">
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+    </section>
+    
+    <!-- Certificates Section -->
+    <section id="Certificates" class="section" role="region" aria-labelledby="certificates-heading">
+      <h2 id="certificates-heading">Certificates</h2>
+      <div class="cert-carousel" data-flickity='{ "wrapAround": true, "autoPlay": 3500, "pageDots": true, "cellAlign": "center" }' role="region" aria-label="Certificates carousel">
+        <div class="cert-cell">
+          <div class="cert-logo">
+            <img src="https://api.sololearn.com/Uploads/Avatars/sololearn.png" alt="SoloLearn Logo" loading="lazy">
+          </div>
+          <div class="cert-title">Python for Beginners</div>
+          <div class="cert-date">SoloLearn · Jan 2024</div>
+          <div class="cert-desc">Completed the SoloLearn Python for Beginners course, covering variables, loops, functions, and more.</div>
+        </div>
+        <div class="cert-cell">
+          <div class="cert-logo">
+            <img src="https://api.sololearn.com/Uploads/Avatars/sololearn.png" alt="SoloLearn Logo" loading="lazy">
+          </div>
+          <div class="cert-title">Responsive Web Design</div>
+          <div class="cert-date">SoloLearn · Feb 2024</div>
+          <div class="cert-desc">Learned to build responsive websites using HTML5, CSS3, and modern design principles on SoloLearn.</div>
+        </div>
+        <div class="cert-cell">
+          <div class="cert-logo">
+            <img src="https://api.sololearn.com/Uploads/Avatars/sololearn.png" alt="SoloLearn Logo" loading="lazy">
+          </div>
+          <div class="cert-title">JavaScript Essentials</div>
+          <div class="cert-date">SoloLearn · Mar 2024</div>
+          <div class="cert-desc">Mastered the fundamentals of JavaScript, DOM manipulation, and interactive web apps on SoloLearn.</div>
+        </div>
+        <div class="cert-cell">
+          <div class="cert-logo">
+            <img src="https://api.sololearn.com/Uploads/Avatars/sololearn.png" alt="SoloLearn Logo" loading="lazy">
+          </div>
+          <div class="cert-title">Game Development with Python</div>
+          <div class="cert-date">SoloLearn · Apr 2024</div>
+          <div class="cert-desc">Built several games using Python, learning about game loops, sprites, and logic on SoloLearn.</div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" placeholder="Enter the subject of your message" required />
-      </div>
-      <div class="form-group">
-        <label for="message">Your Message:</label>
-        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
-      </div>
-      <button type="submit" class="btn-submit">Send Message</button>
-    </form>
-  </section>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="Contact" class="section" role="region" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>Have a question or want to connect? Drop a message below!</p>
+      <form action="https://formspree.io/f/xovezdzq" method="POST" role="form" aria-label="Contact form">
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-required="true" />
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required aria-required="true" />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" placeholder="Enter the subject of your message" required aria-required="true" />
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" placeholder="Write your message here..." required aria-required="true"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  
   <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" defer></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       // Typed.js
@@ -670,6 +810,7 @@
         backDelay: 2000,
         loop: true,
       });
+      
       // Matrix Canvas
       const c = document.getElementById("c");
       const ctx = c.getContext("2d");
@@ -678,7 +819,7 @@
         c.height = window.innerHeight;
       }
       resizeCanvas();
-      const fontSize = 28; // larger for visibility
+      const fontSize = 28;
       let columns = Math.floor(c.width / fontSize);
       const codeLines = ["let", "a", "=", "5", ";", "if", "(", "x", ">", "10", ")", "{", "console", "log", "(", ")", "}", "else", "{", ">>>", "false;", "}"];
       let drops = Array.from({ length: columns }, () => ({
@@ -688,7 +829,7 @@
       function draw() {
         ctx.fillStyle = "rgba(0, 0, 0, 0.18)";
         ctx.fillRect(0, 0, c.width, c.height);
-        ctx.fillStyle = "rgba(120, 255, 120, 0.95)"; // bright green, high opacity
+        ctx.fillStyle = "rgba(120, 255, 120, 0.95)";
         ctx.font = fontSize + "px monospace";
         drops.forEach((drop, i) => {
           ctx.fillText(drop.char, i * fontSize, drop.y);
@@ -708,12 +849,14 @@
           y: Math.random() * c.height,
         }));
       });
+      
       // Sidebar active link
       document.querySelectorAll('#sidebar a').forEach(link => {
         link.addEventListener('click', function() {
           document.querySelectorAll('#sidebar a').forEach(l => l.classList.remove('active'));
           this.classList.add('active');
           document.getElementById('sidebar').classList.remove('open');
+          document.getElementById('hamburger').setAttribute('aria-expanded', 'false');
         });
       });
 
@@ -733,16 +876,21 @@
         observer.observe(dhLogo);
       }
     });
+    
     // Hamburger menu
     function hamburger() {
       const menu = document.getElementById("sidebar");
       const icon = document.getElementById("hamburger");
-      if (menu.classList.contains("open")) {
+      const isOpen = menu.classList.contains("open");
+      
+      if (isOpen) {
         menu.classList.remove("open");
         icon.classList.remove("open");
+        icon.setAttribute('aria-expanded', 'false');
       } else {
         menu.classList.add("open");
         icon.classList.add("open");
+        icon.setAttribute('aria-expanded', 'true');
       }
     }
   </script>
